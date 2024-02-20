@@ -1,10 +1,10 @@
 import { Box, Grid, Stack } from "@mui/material";
 import React from "react";
-import backgroundImage from "../assets/Login_Background.png";
+import backgroundImage from "../assets/Signup_page_bg_image.png";
 import kristLogo from "../assets/Krist_logo.png";
-import LoginPage from "../components/LoginPage";
+import SignUpPage from "../components/SignUpPage";
 
-function Login() {
+export default function SignUp() {
   return (
     <>
       <Stack height={"100vh"} maxHeight={"100vh"}>
@@ -30,7 +30,7 @@ function Login() {
             <Box height="100%" width="100%">
               <Grid container height="100%" width="100%" alignItems={"center"}>
                 <Grid item xs={12}>
-                  <LoginPage />
+                  <SignUpPage />
                 </Grid>
               </Grid>
             </Box>
@@ -40,5 +40,3 @@ function Login() {
     </>
   );
 }
-
-export default Login;

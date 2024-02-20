@@ -1,10 +1,9 @@
 import { Box, Grid, Stack } from "@mui/material";
 import React from "react";
-import backgroundImage from "../assets/Login_Background.png";
-import kristLogo from "../assets/Krist_logo.png";
-import LoginPage from "../components/LoginPage";
+import backgroundImage from "../assets/OtpPageImage.png";
+import OtpPage from "../components/OtpPage";
 
-function Login() {
+function Otp() {
   return (
     <>
       <Stack height={"100vh"} maxHeight={"100vh"}>
@@ -18,19 +17,13 @@ function Login() {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "100% 100%",
               }}
-            >
-              <img
-                src={kristLogo}
-                alt="Krist Logo"
-                style={{ marginTop: "50px", marginLeft: "40px" }}
-              />
-            </Box>
+            ></Box>
           </Grid>
           <Grid item xs={12} md={6}>
             <Box height="100%" width="100%">
               <Grid container height="100%" width="100%" alignItems={"center"}>
                 <Grid item xs={12}>
-                  <LoginPage />
+                  <OtpPage />
                 </Grid>
               </Grid>
             </Box>
@@ -41,4 +34,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Otp;
