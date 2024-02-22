@@ -1,25 +1,68 @@
-import axios from "axios"; // Make sure this is correctly imported (case-sensitive)
+import Card from "react-bootstrap/Card";
+import { Grid } from "@mui/material";
+import Bg_Image from "..//assets/mentshirt.jpg";
+import girl_Image from "..//assets/westn_wear.png";
+import Ethnic_Img from "..//assets/Ethnic_wear.avif";
+import Kids_Img from "..//assets/kids_wear.jpeg";
 
+// import Button from "react-bootstrap/Button";
 export default function ShopByCategoryProduct() {
-  // Define an async function to fetch and store products
-  async function fetchProducts() {
-    try {
-      // Await the axios call to resolve, making the asynchronous code look synchronous
-      const response = await axios.get(
-        "https://dummyjson.com/products/categories"
-      );
-
-      // Assuming you want to store the products data in a variable
-      const productsData = response.data;
-
-      // Now, you can use console.log to see the data
-      console.log(productsData);
-
-      // If you need to use the productsData outside, consider returning it from the function
-    } catch (error) {
-      // Handle any errors that occur during the fetch
-      console.error("There was an error!", error);
-    }
-  }
-  fetchProducts();
+  return (
+    <>
+      <Grid container>
+        <Grid item xs={3}>
+          <Card style={{ width: "10rem" }}>
+            <Card.Img
+              variant="top"
+              src={Bg_Image}
+              height={"250px"}
+              width={"200px"}
+            />
+            <Card.Body>
+              <Card.Title>Casual Wear</Card.Title>
+            </Card.Body>
+          </Card>
+        </Grid>
+        <Grid item xs={3}>
+          <Card style={{ width: "10rem" }}>
+            <Card.Img
+              variant="top"
+              src={girl_Image}
+              height={"250px"}
+              width={"200px"}
+            />
+            <Card.Body>
+              <Card.Title>Western Wear</Card.Title>
+            </Card.Body>
+          </Card>
+        </Grid>
+        <Grid item xs={3}>
+          <Card style={{ width: "10rem" }}>
+            <Card.Img
+              variant="top"
+              src={Ethnic_Img}
+              height={"250px"}
+              width={"200px"}
+            />
+            <Card.Body>
+              <Card.Title>Ethnic Wear</Card.Title>
+            </Card.Body>
+          </Card>
+        </Grid>
+        <Grid item xs={3}>
+          <Card style={{ width: "10rem" }}>
+            <Card.Img
+              variant="top"
+              src={Kids_Img}
+              height={"250px"}
+              width={"200px"}
+            />
+            <Card.Body>
+              <Card.Title>Kids Wear</Card.Title>
+            </Card.Body>
+          </Card>
+        </Grid>
+      </Grid>
+    </>
+  );
 }

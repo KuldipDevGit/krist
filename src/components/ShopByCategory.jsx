@@ -2,10 +2,11 @@ import { Grid, Typography, Button } from "@mui/material";
 import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
 import ArrowBackOutlinedIcon from "@mui/icons-material/ArrowBackOutlined";
 import ShopByCategoryProduct from "./ShopByCategoryProduct";
+// import ShopByCategoryProduct from "./ShopByCategoryProduct";
 
 export default function ShopByCategory() {
   return (
-    <Grid container mt={3}>
+    <Grid container mt={3} rowSpacing={3}>
       <Grid item xs={10}>
         {" "}
         <Typography variant="h4">Shop by Categories</Typography>
