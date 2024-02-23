@@ -18,7 +18,7 @@ export default function DealOfTheMoth() {
             ornare suspendisse sed nisi lacus.
           </Typography>
           <Grid container>
-            <Grid item xs={12} textAlign={"center"}>
+            <Grid item xs={12} textAlign={"center"} ml={21}>
               <Grid container columnSpacing={3} textAlign={"center"}>
                 <Grid item xs={3} md={2}>
                   <Typography

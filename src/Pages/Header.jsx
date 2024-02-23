@@ -13,7 +13,6 @@ export default function Header() {
         textAlign={"center"}
         height={"50px"}
         alignItems={"center"}
-        border={"1px solid red"}
       >
         <Grid item xs={3}>
           <img src={krist_Logo} alt="Krist Logo" height={"35px"} />

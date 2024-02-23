@@ -7,7 +7,6 @@ export default function Slider() {
     <Box
       height={"100%"}
       width={"100%"}
-      border={"1px solid blue"}
       sx={{
         display: "flex", // Added for flexbox
         justifyContent: "center", // Center horizontally
