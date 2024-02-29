@@ -1,6 +1,6 @@
 import { Grid, Link } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import { hover } from "@testing-library/user-event/dist/hover";
+
 export default function NavBar() {
   return (
     <>
@@ -22,7 +22,6 @@ export default function NavBar() {
             style={{
               textDecoration: "none",
               color: "#000",
-              
             }}
           >
             <Grid container>
