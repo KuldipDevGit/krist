@@ -7,6 +7,11 @@ import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
+import Visa_Logo from "..//assets/visa.png";
+import Master_Logo from "..//assets/mastercard.png";
+import Gpay_Logo from "..//assets/gpay.jpg";
+import Amex_Logo from "..//assets/amex.jpg";
+import Paypal_Logo from "..//assets/Paypal.png";
 
 export default function Footer() {
   return (
@@ -104,7 +109,13 @@ export default function Footer() {
         </Grid>
       </Grid>
       <Grid container sx={{ backgroundColor: "#000" }}>
-        <Grid item xs={4}></Grid>
+        <Grid item xs={4} textAlign={"center"}>
+            <img src={Visa_Logo} alt="" height={"30px"}/>
+            <img src={Master_Logo} alt="" height={"30px"} style={{marginLeft:"9px"}} />
+            <img src={Gpay_Logo} alt="" height={"30px"} style={{marginLeft:"9px"}} />
+            <img src={Amex_Logo} alt="" height={"30px"} style={{marginLeft:"9px"}} />
+            <img src={Paypal_Logo} alt="" height={"30px"} style={{marginLeft:"9px"}} />
+        </Grid>
         <Grid item xs={4} textAlign={"center"} color={"#fff"}>
           <Typography variant="body2">
             @2003 Krist All Rights are reserved
