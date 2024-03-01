@@ -12,12 +12,24 @@ import { useForm } from "react-hook-form";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
+import Axios from "axios";
 function LoginPage() {
   const { register, handleSubmit } = useForm();
   const onSubmit = async (data) => {
-    const LocalData = localStorage.setItem("LoginInfo", JSON.stringify(data));
-    console.log("first", LocalData);
+    localStorage.setItem("LoginInfo", data);
+    console.log("first", data.Email);
+    console.log("Password", data.password);
+    try {
+      const PostData = await Axios.post("http://127.0.0.1:8000/api/user/", {
+        username: data.Email,
+        password: data.password,
+      });
+      console.log("PostData", PostData);
+    } catch (error) {
+      console.error("Axios error:", error);
+    }
   };
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <Grid container rowSpacing={2} alignItems={"center"} pl={3}>
