@@ -1,67 +1,55 @@
-import Card from "react-bootstrap/Card";
+// ShopByCategoryProduct.js
+import React from "react";
 import { Grid } from "@mui/material";
-import Bg_Image from "..//assets/mentshirt.jpg";
-import girl_Image from "..//assets/westn_wear.png";
-import Ethnic_Img from "..//assets/Ethnic_wear.avif";
-import Kids_Img from "..//assets/kids_wear.jpeg";
+import ProductCard from "./ProductCard";
+import all_product from "../assets/all_product";
 
-// import Button from "react-bootstrap/Button";
 export default function ShopByCategoryProduct() {
   return (
     <>
-      <Grid container>
-        <Grid item xs={3}>
-          <Card style={{ width: "10rem" }}>
-            <Card.Img
-              variant="top"
-              src={Bg_Image}
-              height={"250px"}
-              width={"200px"}
-            />
-            <Card.Body>
-              <Card.Title>Casual Wear</Card.Title>
-            </Card.Body>
-          </Card>
-        </Grid>
-        <Grid item xs={3}>
-          <Card style={{ width: "10rem" }}>
-            <Card.Img
-              variant="top"
-              src={girl_Image}
-              height={"250px"}
-              width={"200px"}
-            />
-            <Card.Body>
-              <Card.Title>Western Wear</Card.Title>
-            </Card.Body>
-          </Card>
-        </Grid>
-        <Grid item xs={3}>
-          <Card style={{ width: "10rem" }}>
-            <Card.Img
-              variant="top"
-              src={Ethnic_Img}
-              height={"250px"}
-              width={"200px"}
-            />
-            <Card.Body>
-              <Card.Title>Ethnic Wear</Card.Title>
-            </Card.Body>
-          </Card>
-        </Grid>
-        <Grid item xs={3}>
-          <Card style={{ width: "10rem" }}>
-            <Card.Img
-              variant="top"
-              src={Kids_Img}
-              height={"250px"}
-              width={"200px"}
-            />
-            <Card.Body>
-              <Card.Title>Kids Wear</Card.Title>
-            </Card.Body>
-          </Card>
-        </Grid>
+      <Grid container rowSpacing={2} columnSpacing={2}>
+        {all_product
+          .filter((product) => product.id === 13 && product.category === "men")
+          .map((product) => (
+            <Grid item xs={12} sm={6} md={4} key={product.id}>
+              <ProductCard
+                id={product.id}
+                name={product.name}
+                category={product.category}
+                image={product.image}
+                new_price={product.new_price}
+                old_price={product.old_price}
+              />
+            </Grid>
+          ))}
+        {all_product
+          .filter((product) => product.id === 7 && product.category === "women")
+          .map((product) => (
+            <Grid item xs={12} sm={6} md={4} key={product.id}>
+              <ProductCard
+                id={product.id}
+                name={product.name}
+                category={product.category}
+                image={product.image}
+                new_price={product.new_price}
+                old_price={product.old_price}
+              />
+            </Grid>
+          ))}
+        {all_product
+          .filter((product) => product.id === 26 && product.category === "kid")
+          .map((product) => (
+            <Grid item xs={12} sm={6} md={4} key={product.id}>
+              <ProductCard
+                id={product.id}
+                name={product.name}
+                category={product.category}
+                image={product.image}
+                new_price={product.new_price}
+                old_price={product.old_price}
+              />
+            </Grid>
+          ))}
       </Grid>
     </>
   );

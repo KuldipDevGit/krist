@@ -7,8 +7,9 @@ import ForgotPassword from "./ForgotPassword";
 import Otp from "./Otp";
 import Header from "./Header";
 import Footer from "./Footer";
-// import { Sign } from "crypto";
-
+import Men from "./Men";
+import Woman from "./Woman";
+import Kid from "./Kid";
 function Krist() {
   return (
     <>
@@ -21,6 +22,9 @@ function Krist() {
           <Route path="/Home" element={<Home />} />
           <Route path="/ForgotPassword" element={<ForgotPassword />} />
           <Route path="/Otp" element={<Otp />} />
+          <Route path="/men" element={<Men />} />
+          <Route path="/woman" element={<Woman />} />
+          <Route path="/kid" element={<Kid />} />
         </Routes>
         <Footer />
       </BrowserRouter>
