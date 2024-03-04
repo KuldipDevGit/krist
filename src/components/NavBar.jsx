@@ -59,7 +59,7 @@ export default function NavBar() {
         </Grid>
         <Grid item xs={2}>
           <Link
-            href="/Home"
+            href="/contact"
             style={{
               textDecoration: "none",
               color: "#000",

@@ -6,6 +6,7 @@ import DealOfTheMoth from "../components/DealOfTheMonth";
 import RatingPage from "../components/RatingPage";
 import InstagramStory from "../components/InstagramStory";
 import Offer from "../components/Offer";
+import Contact from "./Contact";
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
         <Grid item xs={12}>
           <Offer />
         </Grid>
+        
       </Grid>
     </>
   );

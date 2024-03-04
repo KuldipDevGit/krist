@@ -7,6 +7,7 @@ import ForgotPassword from "./ForgotPassword";
 import Otp from "./Otp";
 import Header from "./Header";
 import Footer from "./Footer";
+import Contact from "./Contact";
 // import { Sign } from "crypto";
 
 function Krist() {
@@ -21,6 +22,7 @@ function Krist() {
           <Route path="/Home" element={<Home />} />
           <Route path="/ForgotPassword" element={<ForgotPassword />} />
           <Route path="/Otp" element={<Otp />} />
+          <Route path="/contact" element = {<Contact />}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>
